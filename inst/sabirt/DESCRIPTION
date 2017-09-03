@@ -1,0 +1,8 @@
+Title: Shiny App for Bayesian Item Response Theory (SABIRT)
+Type: Shiny
+Version: 0.1.0
+Authors@R: c(person("Javier", "Martinez", email = "", role = c("aut", "cre")), person("Irene", "Garcia Mosquera", email = "", role = c("ctb")))
+Maintainer: Javier Martinez <martinezjavier243@gmail.com>
+Description: A web interactive application intended for the making of an MCMC estimation and model-fit of the item response models designed by Johnson and Albert (1999) and Beguin & Glas (2001). The outcome are the items parameters (difficulties and discrimination for Two-Parameter normal ogive (2pno), and additionally the chance to guess the right answers for Three-Parameter normal ogive (3pno)) and also the latent abilities of each examinee.
+Imports: coda, mvtnorm, stats, graphics, shiny, shinyjs, bairt
+License: GPL (>= 2)
