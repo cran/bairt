@@ -19,7 +19,7 @@
 #' \eqn{c_j}.
 #'
 #' The Potential Scale Reduction Factor (\emph{Rhat}) is calculated
-#' for each chain, \emph{BAIRT} generates a single MCMC and evaluates
+#' for each chain, \emph{bairt} generates a single MCMC and evaluates
 #' convergence by breaking the chain in three sub chains and comparing the
 #' between- and within-subchain variance.
 #'
@@ -74,7 +74,7 @@ check.plot <- function(mcmclist, ...) UseMethod("check.plot", mcmclist)
 #' \eqn{c_j}.
 #'
 #' The Potential Scale Reduction Factor (\emph{Rhat}) is calculated
-#' for each chain, \emph{BAIRT} generates a single MCMC and evaluates
+#' for each chain, \emph{bairt} generates a single MCMC and evaluates
 #' convergence by breaking the chain in three sub chains and comparing the
 #' between- and within-subchain variance.
 #'
@@ -132,7 +132,7 @@ check.plot.default <- function(mcmclist, ...) {
 #' \eqn{c_j}.
 #'
 #' The Potential Scale Reduction Factor (\emph{Rhat}) is calculated
-#' for each chain, \emph{BAIRT} generates a single MCMC and evaluates
+#' for each chain, \emph{bairt} generates a single MCMC and evaluates
 #' convergence by breaking the chain in three sub chains and comparing the
 #' between- and within-subchain variance.
 #'
@@ -179,7 +179,7 @@ check.plot.default <- function(mcmclist, ...) {
 #' chain.study(model2, parameter = "theta", chain = 10)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Two-Parameter Normal Ogive Model
 #' modelAll2 <- mcmc.2pnob(MathTest, iter = 3500, burning = 500, thin = 10)
 #' check.plot(modelAll2)
@@ -189,8 +189,8 @@ check.plot.default <- function(mcmclist, ...) {
 #' # Three-Parameter Normal Ogive Model
 #' modelAll3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500, thin = 10)
 #' check.plot(modelAll3)
-#' chain.study(modelAll3 , parameter = "b", chain = 12)
-#' chain.study(modelAll3 , parameter = "c", chain = 10)
+#' chain.study(modelAll3, parameter = "b", chain = 12)
+#' chain.study(modelAll3, parameter = "c", chain = 10)
 #' }
 #'
 #' ## End(Not run)
@@ -280,7 +280,7 @@ check.plot.mcmc.2pnob <- function(mcmclist, converg.test = TRUE, ...) {
 #' \eqn{c_j}.
 #'
 #' The Potential Scale Reduction Factor (\emph{Rhat}) is calculated
-#' for each chain, \emph{BAIRT} generates a single MCMC and evaluates
+#' for each chain, \emph{bairt} generates a single MCMC and evaluates
 #' convergence by breaking the chain in three sub chains and comparing the
 #' between- and within-subchain variance.
 #'
@@ -340,8 +340,8 @@ check.plot.mcmc.2pnob <- function(mcmclist, converg.test = TRUE, ...) {
 #' # Three-Parameter Normal Ogive Model
 #' modelAll3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500, thin = 10)
 #' check.plot(modelAll3)
-#' chain.study(modelAll3 , parameter = "b", chain = 12)
-#' chain.study(modelAll3 , parameter = "c", chain = 10)
+#' chain.study(modelAll3, parameter = "b", chain = 12)
+#' chain.study(modelAll3, parameter = "c", chain = 10)
 #' }
 #'
 #' ## End(Not run)

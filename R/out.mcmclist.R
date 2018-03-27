@@ -9,7 +9,7 @@
 #' @title Diagnostic of \emph{mcmc.2pnob} or \emph{mcmc.3pnob} object
 #'
 #' @description
-#' This function give the summary for all MCMC chains. It including calculus of
+#' This function gives the summary for all MCMC chains. It including calculus of
 #' Rhat, posterior mean, posterior standard deviation and posterior quartiles.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} class object.
@@ -40,7 +40,7 @@
 #' diagnostic.mcmc(model2)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' diagnostic.mcmc(model3)
@@ -70,7 +70,7 @@ diagnostic.mcmc <- function(mcmclist, ...){
 #' @title Values of the last iteration for each chain
 #'
 #' @description
-#' This function give the values of the last iteration for each chain. This is
+#' This function gives the values of the last iteration for each chain. This is
 #' useful for assign the initial values from new MCMC models.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} class object.
@@ -101,7 +101,7 @@ diagnostic.mcmc <- function(mcmclist, ...){
 #' iter = 100, burning = 0)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #'
@@ -132,17 +132,17 @@ final.values.mcmc <- function(mcmclist, ...){
 
 ###############################################################################
 ###############################################################################
-#' @title Number of Iterations from an MCMC object.
+#' @title Number of Iterations for an MCMC object.
 #'
 #' @description
-#' This function give the number of Iterations from an class object
+#' This function gives the number of Iterations for a class object
 #' \emph{mcmc.2pnob} or \emph{mcmc.3pnob}.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} class object.
 #' @param ... Further arguments.
 #'
 #' @return
-#' The iterations number for a \emph{mcmc.2pnob} or \emph{mcmc.3pnob} object.
+#' The number of iterations for an \emph{mcmc.2pnob} or \emph{mcmc.3pnob} object.
 #'
 #' @author
 #' Javier Martínez
@@ -166,7 +166,7 @@ final.values.mcmc <- function(mcmclist, ...){
 #' data.mcmc(model2)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' iter.mcmc(model3)
@@ -202,7 +202,7 @@ iter.mcmc <- function(mcmclist, ...){
 #' @title Burning of MCMC objects
 #'
 #' @description
-#' This function give the number of the first discarded iterations for an MCMC
+#' This function gives the number of the first discarded iterations for an MCMC
 #' object of class mcmc.2pnob or mcmc.3pnob.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} class object.
@@ -233,7 +233,7 @@ iter.mcmc <- function(mcmclist, ...){
 #' data.mcmc(model2)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' iter.mcmc(model3)
@@ -269,7 +269,7 @@ burning.mcmc <- function(mcmclist, ...){
 #' @title Thinning interval
 #'
 #' @description
-#' This function give the thinning interval for a \emph{mcmc.2pnob}
+#' This function gives the thinning interval for a \emph{mcmc.2pnob}
 #' or \emph{mcmc.3pnob} object.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} object class object.
@@ -300,7 +300,7 @@ burning.mcmc <- function(mcmclist, ...){
 #' data.mcmc(model2)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' iter.mcmc(model3)
@@ -337,7 +337,7 @@ thin <- function(mcmclist, ...){
 #' @title Number of splits for MCMC chain
 #'
 #' @description
-#' This function give the splits number for a \emph{mcmc.2pnob}
+#' This function gives the splits number for a \emph{mcmc.2pnob}
 #' or \emph{mcmc.3pnob} object.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} class object.
@@ -368,7 +368,7 @@ thin <- function(mcmclist, ...){
 #' data.mcmc(model2)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' iter.mcmc(model3)
@@ -406,7 +406,7 @@ parts.mcmc <- function(mcmclist, ...){
 #' @title MCMC object model
 #'
 #' @description
-#' This function give the model from MCMC object.
+#' This function gives the model from MCMC object.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} class object.
 #' @param ... Further arguments.
@@ -436,7 +436,7 @@ parts.mcmc <- function(mcmclist, ...){
 #' data.mcmc(model2)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' iter.mcmc(model3)
@@ -472,7 +472,7 @@ model.mcmc <- function(mcmclist, ...){
 #' @title MCMC object data
 #'
 #' @description
-#' This function give the data for an MCMC object.
+#' This function gives the data for an MCMC object.
 #'
 #' @param mcmclist A \emph{mcmc.2pnob} or \emph{mcmc.3pnob} class object.
 #' @param ... Further arguments.
@@ -502,7 +502,7 @@ model.mcmc <- function(mcmclist, ...){
 #' data.mcmc(model2)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' iter.mcmc(model3)

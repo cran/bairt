@@ -7,15 +7,15 @@
 #UI
 #
 
-source("info.R")
+source("www/info.R")
 
-source("utility.sabirt.R")
+source("www/utility.sabirt.R")
 
-source("utility.test.R")
+source("www/utility.test.R")
 
-source("utility.2pnob.R")
+source("www/utility.2pnob.R")
 
-source("utility.3pnob.R")
+source("www/utility.3pnob.R")
 
 
 shiny::shinyUI(fluidPage(
@@ -106,7 +106,8 @@ shiny::shinyUI(fluidPage(
 
          conditionalPanel(
            condition = "input.model != ''",
-              actionButton("changeModel", "Change Model!", style = "color:blue")
+              actionButton("changeModel", "Change Model!",
+                           style = "color:blue")
                          )
               ),
 
@@ -114,14 +115,15 @@ shiny::shinyUI(fluidPage(
 
          conditionalPanel(
            condition = "input.dataOk != input.changeData",
-              actionButton("changeData", "Change Data!", style = "color:blue")
+              actionButton("changeData", "Change Data!",
+                           style = "color:blue")
                           )
            ),
 
        column(3,
 
              actionButton("close", "Close App!", style = "color:red",
-                          onclick = "setTimeout(function(){window.close();},500);")
+                  onclick = "setTimeout(function(){window.close();},500);")
               )
 
              )
@@ -136,7 +138,8 @@ shiny::shinyUI(fluidPage(
     column(3,
            br(),
 
-           p("Use", code("Close App!"),  "button", "for", code("CLOSE SABIRT"),
+           p("Use", code("Close App!"),  "button", "for",
+             code("CLOSE SABIRT"),
              ". If you don't it, you will can create fails."))
 
   )#______________________________________________________

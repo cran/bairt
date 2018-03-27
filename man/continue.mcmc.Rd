@@ -18,7 +18,7 @@ An \emph{mcmc.2pnob or mcmc.3pnob} object.
 }
 \description{
 This is a function for \emph{bairt} objects. You can use \emph{continue.mcmc}
-for continue the MCMC sampling the Two-Parameter or Three-Parameter
+for continue the MCMC the Two-Parameter or Three-Parameter
 normal ogive item response model.
 }
 \details{

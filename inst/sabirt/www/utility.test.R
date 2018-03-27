@@ -59,7 +59,8 @@
 
   if( iter < 0 || burning < 0 || thin < 0 ){
 
-    stop( paste0( "iter, burning, thin whit negative values" ), call. = FALSE)
+    stop( paste0( "iter, burning, thin whit negative values" ),
+          call. = FALSE)
 
   }
 

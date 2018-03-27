@@ -24,7 +24,7 @@ Graph of marginal posterior densities of the item parameter \emph{a, b}
 for \emph{mcmc.2pnob} object or \emph{a, b, c} for \emph{mcmc.3pnob object}.
 The center of error bar corresponds to the marginal posterior mean and
 the extremes correspond to percentiles of the marginal posterior density
-(These are delimited for \emph{prob}). For example,
+(These are delimited by \emph{prob}). For example,
 \emph{prob = c(0.05, 0.95)} is equivalent to the 5th and 95th percentiles
 of the marginal posterior density.
 }

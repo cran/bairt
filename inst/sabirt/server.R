@@ -12,7 +12,8 @@ shiny::shinyServer(function(input, output, session) {
   ####RESET =============================================================
   observeEvent(input$changeData,{
 
-    action <- input[[paste0("goButton", input$changeData - 1, input$changeModel)]]
+    action <- input[[paste0("goButton",
+                            input$changeData - 1, input$changeModel)]]
 
     if(paste0("initialValues", action, ".RData") %in% list.files()){
 
@@ -31,7 +32,8 @@ shiny::shinyServer(function(input, output, session) {
 
   observeEvent(input$changeModel,{
 
-    action <- input[[paste0("goButton", input$changeData, input$changeModel - 1)]]
+    action <- input[[paste0("goButton",
+                            input$changeData, input$changeModel - 1)]]
 
     if(paste0("initialValues", action, ".RData") %in% list.files()){
 
@@ -47,7 +49,8 @@ shiny::shinyServer(function(input, output, session) {
   ####OBSERVER ==========================================================
   observe({
 
-    action <- input[[paste0("goButton", input$changeData, input$changeModel)]]
+    action <- input[[paste0("goButton",
+                            input$changeData, input$changeModel)]]
 
     ##
     if (input$close > 0){
@@ -76,7 +79,8 @@ shiny::shinyServer(function(input, output, session) {
     ##
     if(input$model == ""){
 
-      shinyjs::disable(paste0("goButton", input$changeData, input$changeModel))
+      shinyjs::disable(paste0("goButton",
+                              input$changeData, input$changeModel))
 
       shinyjs::disable("iiter")
 
@@ -84,7 +88,8 @@ shiny::shinyServer(function(input, output, session) {
 
     }else{
 
-      shinyjs::enable(paste0("goButton", input$changeData, input$changeModel))
+      shinyjs::enable(paste0("goButton",
+                             input$changeData, input$changeModel))
 
       shinyjs::enable("iiter")
 
@@ -123,25 +128,29 @@ shiny::shinyServer(function(input, output, session) {
 
       if( k > 0 && .whole(k) ){
 
-        shinyjs::enable( paste0("goButton", input$changeData, input$changeModel) )
+        shinyjs::enable( paste0("goButton",
+                                input$changeData, input$changeModel) )
 
       }else {
 
-        shinyjs::disable( paste0("goButton", input$changeData, input$changeModel) )
+        shinyjs::disable( paste0("goButton",
+                                 input$changeData, input$changeModel) )
 
       }
 
 
       } else {
 
-        shinyjs::disable( paste0("goButton", input$changeData, input$changeModel) )
+        shinyjs::disable( paste0("goButton",
+                                 input$changeData, input$changeModel) )
 
       }##
 
     ##
     if(!(input$itemRespon %in% 0:100)){
 
-      shinyjs::disable( paste0("goButton", input$changeData, input$changeModel) )
+      shinyjs::disable( paste0("goButton",
+                               input$changeData, input$changeModel) )
 
       }##
 
@@ -167,7 +176,8 @@ shiny::shinyServer(function(input, output, session) {
   ####MCMC PANEL ========================================================
   output$mcmcPanel <- renderUI({
 
-    action <- input[[paste0("goButton", input$changeData, input$changeModel)]]
+    action <- input[[paste0("goButton",
+                            input$changeData, input$changeModel)]]
 
     ####
     if(!is.null(action)){
@@ -312,7 +322,7 @@ shiny::shinyServer(function(input, output, session) {
   ####CHANGE BUTTON =====================================================
   output$changeButton <- renderUI({
 
-    actionButton( paste0("goButton", input$changeData, input$changeModel) ,
+    actionButton( paste0("goButton", input$changeData, input$changeModel),
                         "Start MCMC!", style = "color:green" )
 
   })#====================================================================
@@ -397,7 +407,8 @@ shiny::shinyServer(function(input, output, session) {
   ####MCMCLIST ==========================================================
   mcmclist <- reactive({
 
-    action <- input[[paste0("goButton", input$changeData, input$changeModel)]]
+    action <- input[[paste0("goButton",
+                            input$changeData, input$changeModel)]]
 
     if(!is.null( datamcmc() ) && !is.null(  action )){
 
@@ -408,7 +419,8 @@ shiny::shinyServer(function(input, output, session) {
 
           action
 
-          shinyjs::disable(paste0("goButton", input$changeData, input$changeModel))
+          shinyjs::disable(paste0("goButton",
+                                  input$changeData, input$changeModel))
 
           shinyjs::disable("model")
 
@@ -439,8 +451,11 @@ shiny::shinyServer(function(input, output, session) {
 
 
             env <-  reactiveFileReader(1000, session,
-                                       paste0("initialValues", action - 1, ".RData"),
-                                       function( RData, env = new.env() ) {
+                                       paste0("initialValues",
+                                              action - 1, ".RData"),
+
+                                       function( RData,
+                                                 env = new.env() ) {
 
                                          load(RData, env)
 
@@ -476,7 +491,8 @@ shiny::shinyServer(function(input, output, session) {
           }
 
 
-          shinyjs::enable(paste0("goButton", input$changeData, input$changeModel))
+          shinyjs::enable(paste0("goButton",
+                                 input$changeData, input$changeModel))
 
           shinyjs::enable("itemRespon")
 
@@ -735,7 +751,7 @@ shiny::shinyServer(function(input, output, session) {
           }
 
 
-          if(!(input$iiter == input$burnin) && !(input$iiter < input$burnin)){##############
+          if(!(input$iiter == input$burnin) && !(input$iiter < input$burnin)){
 
             return( h5("ERROR: (Iter-Burnin)/Thin is not a whole number",
                        style = "color:red") )
@@ -850,7 +866,7 @@ shiny::shinyServer(function(input, output, session) {
 
        div(
          p("Please note that:"),
-         p(code("Number of Items:"), paste( ncol(data()) ) ),#paste( ncol(data()) - 1 ) ),
+         p(code("Number of Items:"), paste( ncol(data()) ) ),
          p(code("Number of Examinees:"), paste( nrow(data()) ) )
        )
 

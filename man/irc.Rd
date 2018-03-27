@@ -12,18 +12,16 @@ irc(mcmclist, ...)
 \item{...}{Further arguments.}
 }
 \value{
-Plot of posterior density of the item response curve for de \emph{j-th}
-\code{item}.
+Plot of the \emph{j-th} \code{item} response curve.
 }
 \description{
-Plot of posterior density of the item response curve for the \emph{j-th}
-\emph{item}.
+Plot of the \emph{j-th} \code{item} response curve.
 }
 \details{
 The solid line corresponds to the location of the posterior mean and the
-points correspond to the percentiles determined for \emph{prob}.
-If \emph{prob = c(0.05, 0.95)} is equivalent to the 5th and 95th percentils
-of the posterior density.
+points correspond to the percentiles determined by \emph{prob}.
+\emph{prob = c(0.05, 0.95)} corresponds to the 5th and 95th percentils of
+the posterior density respectively.
 }
 \references{
 Johnson, V. E. & Albert, J. H. (1999). Ordinal Data Modeling.

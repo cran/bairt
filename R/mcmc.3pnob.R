@@ -41,17 +41,18 @@
 #'
 #' @details
 #' For the Three-parameter normal ogive item response model, we assume that the
-#' \emph{i-th} individuals performance on a test depends on an unknown latent
-#' variable \eqn{\theta_i} , and we let  \eqn{\theta_1, ...,\theta_n} denote
-#' the latent traits for all \eqn{n} individuals taking the test.
+#' performance of the \emph{i-th} examine depends on an unknown latent
+#' variable \eqn{\theta_i}, and we let \eqn{\theta_1, ...,\theta_n}
+#' respectively denotes the latent traits for all the \emph{n} individuals
+#' taking the test.
 #'
-#' We assume that the probability that an individual answers a test item
-#' correctly depends only on their latent trait value and characteristics of
-#' the item. For the \emph{i-th} individual and \emph{jth} item, we model this
+#' We also assume that the probability of right answer depends only on the
+#' latent trait value and on the characteristics of the item. Specifically,
+#' for the \emph{i-th} individual and \emph{j-th} item, we model this
 #' probability as:
 #'
 #'  \deqn{Pr( Y_{ ij } = 1 | \theta_i, a_ j, b_ j, c_ j ) =
-#'  c_ j + (1 - c_ j )\Phi( a_ j\theta_i - b_ j )},
+#'  c_ j + (1 - c_ j )\Phi( a_ j\theta_i - b_ j )}
 #'
 #' where \eqn{\Phi} is the standard normal cdf, and \eqn{a_ j}, \eqn{b_ j} and
 #' \eqn{c_ j} are the item discrimination, item difficulty and  item guessing

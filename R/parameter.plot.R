@@ -24,7 +24,7 @@
 #' for \emph{mcmc.2pnob} object or \emph{a, b, c} for \emph{mcmc.3pnob object}.
 #' The center of error bar corresponds to the marginal posterior mean and
 #' the extremes correspond to percentiles of the marginal posterior density
-#' (These are delimited for \emph{prob}). For example,
+#' (These are delimited by \emph{prob}). For example,
 #' \emph{prob = c(0.05, 0.95)} is equivalent to the 5th and 95th percentiles
 #' of the marginal posterior density.
 #'
@@ -64,7 +64,7 @@ parameter.plot <- function(mcmclist, ...) UseMethod("parameter.plot", mcmclist)
 #' for \emph{mcmc.2pnob} object or \emph{a, b, c} for \emph{mcmc.3pnob object}.
 #' The center of error bar corresponds to the marginal posterior mean and
 #' the extremes correspond to percentiles of the marginal posterior density
-#' (These are delimited for \emph{prob}). For example,
+#' (These are delimited by \emph{prob}). For example,
 #' \emph{prob = c(0.05, 0.95)} is equivalent to the 5th and 95th percentiles
 #' of the marginal posterior density.
 #'
@@ -108,7 +108,7 @@ parameter.plot.default <- function(mcmclist, ...) NULL
 #' for \emph{mcmc.2pnob} object or \emph{a, b, c} for \emph{mcmc.3pnob object}.
 #' The center of error bar corresponds to the marginal posterior mean and
 #' the extremes correspond to percentiles of the marginal posterior density
-#' (These are delimited for \emph{prob}). For example,
+#' (These are delimited by \emph{prob}). For example,
 #' \emph{prob = c(0.05, 0.95)} is equivalent to the 5th and 95th percentiles
 #' of the marginal posterior density.
 #'
@@ -135,7 +135,7 @@ parameter.plot.default <- function(mcmclist, ...) NULL
 #' parameter.plot(model2, items = 1:100, parameter = "theta" )
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 #' parameter.plot(model3)

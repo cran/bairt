@@ -15,7 +15,7 @@ Three-Parameter Normal Ogive Model}
 
 \item{initial.value}{List with initial values.}
 
-\item{c.prior}{A vector of length two which defines the beta prior
+\item{c.prior}{A two dimensional vector which defines the beta prior
 distribution of guessing parameters. The default is a non-informative prior,
 \emph{Beta(1,1)}.}
 
@@ -34,7 +34,7 @@ An \emph{mcmc.2pnob or mcmc.3pnob} object.
 }
 \description{
 This is a function for \emph{bairt} objects. You can use \emph{continue.mcmc}
-for continue the MCMC sampling the Two-Parameter or Three-Parameter
+for continue the MCMC the Two-Parameter or Three-Parameter
 normal ogive item response model.
 }
 \details{
@@ -54,7 +54,7 @@ model2 <- mcmc.2pnob(MathTest[1:500,], iter = 100, burning = 0)
 model21 <- continue.mcmc(model2, iter = 100, burning = 0)
 
 \donttest{
-# For all examinees of the data
+# For all examinees of the data MathTest
 # Three-Parameter Normal Ogive Model
 # selection of the prior for 5 response options
 cprior <- select.c.prior(5)

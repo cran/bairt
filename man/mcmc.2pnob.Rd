@@ -39,17 +39,18 @@ the function \emph{mcmc.2pno} of \emph{sirt} package.
 }
 \details{
 For the two-parameter normal ogive item response model, we assume that the
-\emph{i-th} individuals performance on a test depends on an unknown latent
-variable \eqn{\theta_i} , and we let  \eqn{\theta_1, ...,\theta_n} denote
-the latent traits for all \emph{n} individuals taking the test.
+performance of the \emph{i-th} examine depends on an unknown latent
+variable \eqn{\theta_i}, and we let \eqn{\theta_1, ...,\theta_n}
+respectively denotes the latent traits for all the \emph{n} individuals
+taking the test.
 
-We assume that the probability that an individual answers a test item
-correctly depends only on their latent trait value and characteristics of
-the item. For the \emph{i-th} individual and \emph{j-th} item, we model this
+We also assume that the probability of right answer depends only on the
+latent trait value and on the characteristics of the item. Specifically,
+for the \emph{i-th} individual and \emph{j-th} item, we model this
 probability as:
 
 \deqn{Pr( Y_{ ij } = 1 | \theta_i, a_ j, b_ j ) =
-\Phi( a_ j\theta_i - b_ j )},
+\Phi( a_ j\theta_i - b_ j )}
 
 where \eqn{\Phi} is the standard normal cdf, and \eqn{a_ j} and \eqn{b_ j}
 are the item discrimination and item difficulty parameters associated with

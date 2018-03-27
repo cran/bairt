@@ -15,7 +15,7 @@ data.mcmc(mcmclist, ...)
 The data for an MCMC object.
 }
 \description{
-This function give the data for an MCMC object.
+This function gives the data for an MCMC object.
 }
 \examples{
 # data for model
@@ -32,7 +32,7 @@ model.mcmc(model2)
 data.mcmc(model2)
 
 \donttest{
-# For all examinees of the data
+# For all examinees of the data MathTest
 # Three-Parameter Normal Ogive Model
 model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 iter.mcmc(model3)

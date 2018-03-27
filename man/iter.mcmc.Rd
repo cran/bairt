@@ -2,7 +2,7 @@
 % Please edit documentation in R/out.mcmclist.R
 \name{iter.mcmc}
 \alias{iter.mcmc}
-\title{Number of Iterations from an MCMC object.}
+\title{Number of Iterations for an MCMC object.}
 \usage{
 iter.mcmc(mcmclist, ...)
 }
@@ -12,10 +12,10 @@ iter.mcmc(mcmclist, ...)
 \item{...}{Further arguments.}
 }
 \value{
-The iterations number for a \emph{mcmc.2pnob} or \emph{mcmc.3pnob} object.
+The number of iterations for an \emph{mcmc.2pnob} or \emph{mcmc.3pnob} object.
 }
 \description{
-This function give the number of Iterations from an class object
+This function gives the number of Iterations for a class object
 \emph{mcmc.2pnob} or \emph{mcmc.3pnob}.
 }
 \examples{
@@ -33,7 +33,7 @@ model.mcmc(model2)
 data.mcmc(model2)
 
 \donttest{
-# For all examinees of the data
+# For all examinees of the data MathTest
 # Three-Parameter Normal Ogive Model
 model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 iter.mcmc(model3)

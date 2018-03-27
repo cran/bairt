@@ -36,7 +36,7 @@ the size of the numbers refers to the marginal posterior means of
 \eqn{c_j}.
 
 The Potential Scale Reduction Factor (\emph{Rhat}) is calculated
-for each chain, \emph{BAIRT} generates a single MCMC and evaluates
+for each chain, \emph{bairt} generates a single MCMC and evaluates
 convergence by breaking the chain in three sub chains and comparing the
 between- and within-subchain variance.
 
@@ -69,8 +69,8 @@ chain.study(modelAll2, parameter = "theta", chain = 10)
 # Three-Parameter Normal Ogive Model
 modelAll3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500, thin = 10)
 check.plot(modelAll3)
-chain.study(modelAll3 , parameter = "b", chain = 12)
-chain.study(modelAll3 , parameter = "c", chain = 10)
+chain.study(modelAll3, parameter = "b", chain = 12)
+chain.study(modelAll3, parameter = "c", chain = 10)
 }
 
 ## End(Not run)

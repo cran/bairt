@@ -16,7 +16,7 @@ A list with the last values simulated from a \emph{mcmc.2pnob} or
 \emph{mcmc.3pnob} class object.
 }
 \description{
-This function give the values of the last iteration for each chain. This is
+This function gives the values of the last iteration for each chain. This is
 useful for assign the initial values from new MCMC models.
 }
 \examples{
@@ -33,7 +33,7 @@ model121 <- mcmc.2pnob(MathTest[1:500,], initial.value = initialValues2,
 iter = 100, burning = 0)
 
 \donttest{
-# For all examinees of the data
+# For all examinees of the data MathTest
 # Three-Parameter Normal Ogive Model
 model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 

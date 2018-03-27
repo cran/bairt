@@ -21,8 +21,8 @@ marginal chain.
 }
 \details{
 The top left graph displays the sequence of simulated values and the top
-right graph displays the lag correlations of the sequence as a function of
-the lag value. The bottom left graph is a histogram of the simulated values
+right graph displays the lagged correlations of the sequence as a function of
+the lag value. The bottom left graph is an histogram of the simulated values
 and the bottom right graph is the box plot of the simulated values.
 }
 \references{

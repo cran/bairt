@@ -28,7 +28,7 @@ the size of the numbers refers to the marginal posterior means of
 \eqn{c_j}.
 
 The Potential Scale Reduction Factor (\emph{Rhat}) is calculated
-for each chain, \emph{BAIRT} generates a single MCMC and evaluates
+for each chain, \emph{bairt} generates a single MCMC and evaluates
 convergence by breaking the chain in three sub chains and comparing the
 between- and within-subchain variance.
 

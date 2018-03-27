@@ -20,9 +20,9 @@ With this is possible to study the chain using the coda packet.
 }
 \details{
 The function \emph{object.coda} create a \emph{mcmc.list} object of the
-marginal chain selectionated. The marginal chain is splits in parts
-determined for \emph{parts}. The objetive is  represent parallel chains
-with different starting values (Beguin & Glas, 2001, p. 547).
+marginal chain selectionated. The marginal chain is splited in subchains
+determined by \emph{parts}. The aim is represent parallel chains with
+different starting values (Beguin & Glas, 2001, p. 547).
 }
 \references{
 A.A.  Beguin, A, A. & Glas, C.A.W. (2001). MCMC Estimation and Some

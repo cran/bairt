@@ -30,8 +30,8 @@ marginal chain.
 }
 \details{
 The top left graph displays the sequence of simulated values and the top
-right graph displays the lag correlations of the sequence as a function of
-the lag value. The bottom left graph is a histogram of the simulated values
+right graph displays the lagged correlations of the sequence as a function of
+the lag value. The bottom left graph is an histogram of the simulated values
 and the bottom right graph is the box plot of the simulated values.
 }
 \examples{
@@ -46,7 +46,7 @@ chain.study(model2, parameter = "b", chain = 12)
 chain.study(model2, parameter = "theta", chain = 10)
 
 \donttest{
-# For all examinees of the data
+# For all examinees of the data MathTest
 # Two-Parameter Normal Ogive Model
 modelAll2 <- mcmc.2pnob(MathTest, iter = 3500, burning = 500, thin = 10)
 check.plot(modelAll2)
@@ -56,8 +56,8 @@ chain.study(modelAll2, parameter = "theta", chain = 10)
 # Three-Parameter Normal Ogive Model
 modelAll3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500, thin = 10)
 check.plot(modelAll3)
-chain.study(modelAll3 , parameter = "b", chain = 12)
-chain.study(modelAll3 , parameter = "c", chain = 10)
+chain.study(modelAll3, parameter = "b", chain = 12)
+chain.study(modelAll3, parameter = "c", chain = 10)
 }
 
 ## End(Not run)

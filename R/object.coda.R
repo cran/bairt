@@ -20,9 +20,9 @@
 #'
 #' @details
 #' The function \emph{object.coda} create a \emph{mcmc.list} object of the
-#' marginal chain selectionated. The marginal chain is splits in parts
-#' determined for \emph{parts}. The objetive is  represent parallel chains
-#' with different starting values (Beguin & Glas, 2001, p. 547).
+#' marginal chain selectionated. The marginal chain is splited in subchains
+#' determined by \emph{parts}. The aim is represent parallel chains with
+#' different starting values (Beguin & Glas, 2001, p. 547).
 #'
 #' @author
 #' Javier Martínez
@@ -56,9 +56,9 @@ object.coda <- function(mcmclist, ...) UseMethod("object.coda", mcmclist)
 #'
 #' @details
 #' The function \emph{object.coda} create a \emph{mcmc.list} object of the
-#' marginal chain selectionated. The marginal chain is splits in parts
-#' determined for \emph{parts}. The objetive is  represent parallel chains
-#' with different starting values (Beguin & Glas, 2001, p. 547).
+#' marginal chain selectionated. The marginal chain is splited in subchains
+#' determined by \emph{parts}. The aim is represent parallel chains with
+#' different starting values (Beguin & Glas, 2001, p. 547).
 #'
 #' @author
 #' Javier Martínez
@@ -94,9 +94,9 @@ object.coda.default <- function(mcmclist, ...) NULL
 #'
 #' @details
 #' The function \emph{object.coda} create a \emph{mcmc.list} object of the
-#' marginal chain selectionated. The marginal chain is splits in parts
-#' determined for \emph{parts}. The objetive is  represent parallel chains
-#' with different starting values (Beguin & Glas, 2001, p. 547).
+#' marginal chain selectionated. The marginal chain is splited in subchains
+#' determined by \emph{parts}. The aim is represent parallel chains with
+#' different starting values (Beguin & Glas, 2001, p. 547).
 #'
 #' @author
 #' Javier Martínez
@@ -123,7 +123,7 @@ object.coda.default <- function(mcmclist, ...) NULL
 #' plot(chain_a1)
 #'
 #' \donttest{
-#' # For all examinees of the data
+#' # For all examinees of the data MathTest
 #' # Three-Parameter Normal Ogive Model
 #' # selection of the prior for 5 response options
 #' cprior <- select.c.prior(5)

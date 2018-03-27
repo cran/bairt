@@ -3,16 +3,16 @@
 \docType{data}
 \name{MathTest}
 \alias{MathTest}
-\title{Observed data for a math test}
-\format{The rows of this matrix represents the sequence of responses
-received by the \emph{i-th} examinee. Similarly, the columns contains the
-responses from all examinees to the \emph{j-th} test item.}
+\title{Data from an math test applied at USB in 2012.}
+\format{The \emph{i-th} row of this matrix represents the answers from the
+\emph{i-th} examinee, whereas the elements in \emph{j-th} column represents
+the answers from the examinees to the \emph{j-th} test item.}
 \usage{
 data(MathTest)
 }
 \description{
 Observed data for a math test designed by Simon
-Bolivar University in 2012. It has represented by an 100 × 15
+Bolivar University (USB) in 2012. It is represented by an 100 × 15
 matrix of 1’s and 0’s.
 }
 \examples{
@@ -25,7 +25,7 @@ model2 <- mcmc.2pnob(MathTest[1:500,], iter = 400, burning = 100)
 check.plot(model2)
 
 \donttest{
-# For all examinees of the data
+# For all examinees of the data MathTest
 # Three-Parameter Normal Ogive Model
 # selection of the prior for 5 response options
 cprior <- select.c.prior(5)

@@ -15,7 +15,7 @@ parts.mcmc(mcmclist, ...)
 The splits number for a \emph{mcmc.2pnob} or \emph{mcmc.3pnob} object.
 }
 \description{
-This function give the splits number for a \emph{mcmc.2pnob}
+This function gives the splits number for a \emph{mcmc.2pnob}
 or \emph{mcmc.3pnob} object.
 }
 \examples{
@@ -33,7 +33,7 @@ model.mcmc(model2)
 data.mcmc(model2)
 
 \donttest{
-# For all examinees of the data
+# For all examinees of the data MathTest
 # Three-Parameter Normal Ogive Model
 model3 <- mcmc.3pnob(MathTest, iter = 3500, burning = 500)
 iter.mcmc(model3)
